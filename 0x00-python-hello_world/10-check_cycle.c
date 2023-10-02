@@ -1,5 +1,5 @@
 #include <stdlib.h>
-#include <lists.h>
+#include "lists.h"
 
 /**
 * check_cycle - Checks if a singly linked list has a cycle.
