@@ -9,8 +9,8 @@ if number < 0:
 else:
     last = number % 10
 if last > 5:
-    print("Last digit of {} is {}".format(number, last) + str1)
+    print("Last digit of {:d} is {:d}".format(number, last) + str1)
 elif last == 0:
-    print("Last digit of {} is {}".format(number, last) + str2)
+    print("Last digit of {:d} is {:d}".format(number, last) + str2)
 else:
-    print("Last digit of {} is {}".format(number, last) + str3)
+    print("Last digit of {:d} is {:d}".format(number, last) + str3)
