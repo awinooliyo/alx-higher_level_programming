@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-defquare_matrix_simple(matrix=[]):
+def square_matrix_simple(matrix=[]):
     """
     A function that computes the square values of all integers of a matrix
     """
