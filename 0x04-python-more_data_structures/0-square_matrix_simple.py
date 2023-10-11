@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-def square_matrix_simple(matrix=[]):
+defquare_matrix_simple(matrix=[]):
     """
-    function that computes the square value of all integers of a matrix
+    function that computes thequare value of all integers of a matrix
     """
     new_matrix = []
     for col in matrix:
