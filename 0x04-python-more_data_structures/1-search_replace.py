@@ -2,7 +2,8 @@
 
 def search_replace(my_list, search, replace):
     """
-    A function that replaces all occurrences of an element by another in a new list.
+    A function that replaces all occurrences of 
+    an element by another in a new list.
     """
 
     new_list = []
@@ -12,4 +13,3 @@ def search_replace(my_list, search, replace):
         else:
             new_list.append(element)
     return new_list
-
