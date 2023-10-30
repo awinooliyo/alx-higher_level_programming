@@ -6,6 +6,7 @@ The module is text_indentation
 Prints a text with 2 new lines after each of these characters: ., ? and :
 """
 
+
 def text_indentation(text):
     """
     Prints a text
@@ -23,7 +24,7 @@ def text_indentation(text):
 
     while count < len(text):
         print(text[count], end="")
-        if text[count] =="\n" or text[count] in ".?:":
+        if text[count] == "\n" or text[count] in ".?:":
             if text[count] in ".?:":
                 print("\n")
             count = count + 1
@@ -31,4 +32,3 @@ def text_indentation(text):
                 count = count + 1
             continue
         count = count + 1
- 

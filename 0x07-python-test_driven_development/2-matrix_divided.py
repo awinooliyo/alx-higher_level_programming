@@ -39,5 +39,3 @@ def matrix_divided(matrix, div):
             else:
                 raise TypeError(error)
     return new_matrix
-
-

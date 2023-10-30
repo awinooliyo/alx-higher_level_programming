@@ -6,7 +6,8 @@ It adds two integers together
 by @Erick Awino
 """
 
-def add_integer(a, b=98)
+
+def add_integer(a, b=98):
     """
     Returns the addition of a and b
     Args:

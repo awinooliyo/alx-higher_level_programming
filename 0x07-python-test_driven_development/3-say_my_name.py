@@ -5,6 +5,7 @@ The module is say_my_name
 It prints the first and last name
 """
 
+
 def say_my_name(first_name, last_name=""):
     """
     Prints <first name> <last name>
