@@ -13,6 +13,7 @@ represents the height and width of the square.
 Import the function:
 
     >>>print_square = __import__('4-print_square').print_square
+    ...
 
 Test it now:
 
