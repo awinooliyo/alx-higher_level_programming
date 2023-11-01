@@ -45,7 +45,8 @@ The function can also work with floating-point numbers.
     ... [7.2, 4.4]
     ... ]
     >>> print(matrix_mul(m_a, m_b))
-    [[34.69, 55.440000000000001], [-78.61, 29. 018000000000008]]
+    [[34.69, 55.44]
+     [-78.61, 29.018]]
 
 Integers and floats can be combined.
 
@@ -62,7 +63,8 @@ Integers and floats can be combined.
     ... [10.01, 11, 12.3]
     ... ]
     >>> print(matrix_mul(m_a, m_b))
-    [[73.03999999999999, 84.5, 95.4], [166.58800000000002, 195.8, 223.74]]
+    [[73.039, 84.5, 95.4]
+     [166.588, 195.8, 223.74]]
 
 A minimum of two arguments must be provided. Otherwise, a TypeError is raised.
 
