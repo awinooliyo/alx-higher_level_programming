@@ -4,18 +4,19 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """The series of test cases for the max_integer function"""
 
     def test_max_at_the_end(self):
         """Test for a list with max value at the end."""
-        max_at_the_end = [1, 2, 3, 4, 5]
-        self.assertEqual(max_integer(max_at_the_end), 5)
+        max_at_the_end = [1, 2, 3, 4]
+        self.assertEqual(max_integer(max_at_the_end), 4)
 
     def test_max_at_beginning(self):
         """Test for a list with max value at the beginning."""
-        max_at_beginning = [5, 4, 3, 2, 1]
-        self.assertEqual(max_integer(max_at_beginning), 5)
+        max_at_beginning = [4, 3, 2, 1]
+        self.assertEqual(max_integer(max_at_beginning), 4)
 
     def test_empty_list(self):
         """Testcase for the empty list."""
@@ -24,13 +25,13 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_ordered_list(self):
         """Test an ordered list of integers."""
-        ordered = [1, 2, 3, 4, 5]
-        self.assertEqual(max_integer(ordered), 5)
+        ordered = [1, 2, 3, 4]
+        self.assertEqual(max_integer(ordered), 4)
 
     def test_unordered_list(self):
         """Test an unordered list of integers."""
-        unordered = [2, 1, 4, 5, 3]
-        self.assertEqual(max_integer(unordered_list), 5)
+        unordered = [2, 1, 4, 3]
+        self.assertEqual(max_integer(unordered_list), 4)
 
     def test_unique_element(self):
         """Test a list with a single element."""
