@@ -23,7 +23,11 @@ Now test it:
     Traceback (most recent call last):
     TypeError: Each row of the matrix must have the same size
 
-    >>> matrix_divided("Hello, 9)
+    >>> matrix_divided([[3, 4], [6, 7]], "Hey")
+    Traceback (most recent call last):
+    TypeError: div must be a munber
+
+    >>> matrix_divided("Hello", 8)
     Traceback (most recent call last):
     TypeError: matrix must be a matrix of (list of lists) of integers/floats
 
