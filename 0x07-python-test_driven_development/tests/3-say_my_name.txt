@@ -32,7 +32,7 @@ Use the Module:
     TypeError: first_name must be a string
 
     >>>say_my_name("Erick", 98)
-    Traceback (most recent call last)
+    Traceback (most recent call last):
     ...
     TypeError: last_name must be a string
 
@@ -42,11 +42,11 @@ Use the Module:
     TypeError: last_name must be a string
 
     >>>say_my_name(None)
-    Traceback (most recent call)
+    Traceback (most recent call):
     ...
     TypeError: first_name must be a string
 
     >>>say_my_name()
-    Traceback (most recent call last)
+    Traceback (most recent call last):
     ...
     TypeError: say_my_name() missing 1 required positinal argument: 'first_name'
