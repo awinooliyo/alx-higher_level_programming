@@ -7,7 +7,7 @@ First import ``say_my_name`` from the ``say_my_name`` module:
 
     >>> say_my_name = __import__('3-say_my_name').say_my_name
  
-Proceed to use it as follows:
+Use the Module:
 
     >>>say_my_name("Erick", "Awino")
     My name is Erick Awino
