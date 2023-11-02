@@ -2,16 +2,16 @@
 
 """
 The module is say_my_name
-It prints the first and last name
+It prints first name and last name
 """
 
 
 def say_my_name(first_name, last_name=""):
     """
-    Prints <first name> <last name>
+    Print My name is <first name> <last name>.
     Args:
-        first_name string: the first value
-        last_name string: the second value
+        first_name(string) the first value
+        last_name(string) the second value
     """
 
     if type(first_name) is not str:
