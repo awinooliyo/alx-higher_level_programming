@@ -12,14 +12,13 @@ Usage
 ::
 
     >>>matrix_mul = __import__('100-matrix_mul').matrix_mul
-    >>>m_a = [
+    >>> m_a = [
     ... [1, 2],
     ... [3, 4]
     ... ]
     >>> m_b = m_a
     >>> print(matrix_mul(m_a, m_b))
-    [[7, 10] 
-     [15, 22]]
+    [[7, 10], 15, 22]]
 
 ::
 
@@ -45,8 +44,7 @@ The function can also work with floating-point numbers.
     ... [7.2, 4.4]
     ... ]
     >>> print(matrix_mul(m_a, m_b))
-    [[34.69, 55.44]
-     [-78.61, 29.018]]
+    [[34.69, 55.44], [-78.61, 29.018]]
 
 Integers and floats can be combined.
 
@@ -63,21 +61,20 @@ Integers and floats can be combined.
     ... [10.01, 11, 12.3]
     ... ]
     >>> print(matrix_mul(m_a, m_b))
-    [[73.039, 84.5, 95.4]
-     [166.588, 195.8, 223.74]]
+    [[73.039, 84.5, 95.4], [166.588, 195.8, 223.74]]
 
 A minimum of two arguments must be provided. Otherwise, a TypeError is raised.
 
 ::
 
-    >>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
+    >>> print(matrix_mul())
     Traceback (most recent call last):
     TypeError: matrix_mul() missing 2 required positional arguments: 
     'm_a' and 'm_b'
 
 ::
 
-    >>> print(matrix_mul()) # doctest: +NORMALIZE_WHITESPACE
+    >>> print(matrix_mul())
     Traceback (most recent call last):
     TypeError: matrix_mul() missing 2 required positional arguments: 
     'm_a' and 'm_b'
@@ -211,7 +208,7 @@ equivalent. Otherwise, a TypeError is raised.
     ... ]
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    TypeError: each row of m_a must should be of the same size
+    TypeError: each row of m_a must be of the same size
 
 ::
 
@@ -225,7 +222,7 @@ equivalent. Otherwise, a TypeError is raised.
     ... ]
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    TypeError: each row of m_b must should be of the same size
+    TypeError: each row of m_b must be of the same size
 
 ::
 
@@ -236,4 +233,4 @@ equivalent. Otherwise, a TypeError is raised.
     >>> m_b = m_a
     >>> print(matrix_mul(m_a, m_b))
     Traceback (most recent call last):
-    TypeError: each row of m_a must should be of the same size
+    TypeError: each row of m_a must be of the same size
