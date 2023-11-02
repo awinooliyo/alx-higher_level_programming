@@ -6,11 +6,11 @@ Usage:
 
 Begin by importing ``text_indentation`` from the ``text_indentation`` module:
 
-    >>>text_indentation = __import__('5-text_indentation').text_indentation
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
 
 Now use it:
 
-    >>>text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi: litteram videor an totas paginas commovere")
+    >>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi: litteram videor an totas paginas commovere")
     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     <BLANKLINE>
     Quonam modo?
@@ -35,26 +35,36 @@ Now use it:
     :
     <BLANKLINE>
 
+    >>> text_indentation("    Hi there.")
+    Hi there.
+    <BLANKLINE>
+
+    >>> text_indentation("     ")
+
+
+    >>> text_indentation("    what now.   This is a mess.  ")
+    what now.
+    <BLANKLINE>
+    This is a mess.
+    <BLANKLINE>
+
     >>> text_indentation(":.")
     :
     <BLANKLINE>
     .
     <BLANKLINE>
 
-    >>>text_indentation(" ")
+    >>> text_indentation(" ")
 
-    >>>text_indentation("")
+    >>> text_indentation("")
 
-    >>>text_indentation(" .")
-    . 
-    <BLANKLINE>
 
-    >>>text_indentation(-2)
+    >>> text_indentation(-2)
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
 
-    >>>text_indentation(None)
+    >>> text_indentation(None)
     Traceback (most recent call last):
     ...
     TypeError: text must be a string
