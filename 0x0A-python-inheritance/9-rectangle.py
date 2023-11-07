@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """Returns area of the ractangle and overrides area() from superclass"""
+        """Returns area of a ractangle and overrides area() from superclass"""
         return self.__width * self.__height
 
     def __str__(self):
