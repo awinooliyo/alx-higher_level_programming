@@ -22,7 +22,7 @@ class Student:
 
         else:
             d = {}
-            for  attr in attrs:
+            for attr in attrs:
                 if hasattr(self, attr):
                     d[attr] = getattr(self, attr)
             return d
