@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-"""This module adds all arguments to a Pythin list and saves them to a file"""
-
+""""adds all arguments to a Python list"""
 
 import sys
-form unicidedata import name
+from unicodedata import name
 
 if __name__ == "__main__":
     save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
