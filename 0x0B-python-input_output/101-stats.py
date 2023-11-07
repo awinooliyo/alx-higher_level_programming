@@ -30,7 +30,7 @@ if __name__ == "__main__":
 
             try:
                 size += int(line[-1])
-            except (indexError, ValueError):
+            except (IndexError, ValueError):
                 pass
 
             try:
