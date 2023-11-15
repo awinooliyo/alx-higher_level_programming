@@ -4,23 +4,17 @@
 from models.rectangle import Rectangle
 
 
-class Square:
-    """A subclass of class Rectangle"""
-    args:
-        size: size
-        x: position
-        y: position
-        id: id
-    """
+class Square(Rectangle):
+    """A subclass of the Rectangle class"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Class constructor"""
         super().__init__(size, size, x, y, id)
         self.size = size
 
-    def__str__(self):
+    def __str__(self):
         """Returns a string representation of a square instance"""
-        return f"[square] ({self.id}) {self.id}/{self.y} - {self.width}"
-
+        return f"[square] ({self.id}) {self.x}/{self.y} - {self.size}"
 
     @property
     def size(self):
@@ -29,7 +23,7 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """validation from class rectangle"""
+        """Validation from class Rectangle"""
         self.width = value
         self.height = value
 
@@ -37,7 +31,7 @@ class Square:
         """Assigns an argument to each attribute"""
         if len(args):
             for i, a in enumerate(args):
-                if i== 0:
+                if i == 0:
                     self.id = a
                 elif i == 1:
                     self.size = a
@@ -46,17 +40,17 @@ class Square:
                 elif i == 3:
                     self.y = a
         else:
-        if "id" in kwargs:
-            self.id = kwargs["id"]
-        if "size" in kwargs:
-            self.size = kwargs["size"]
-        if "x" in kwargs:
-            self.x = ["x"]
-        if "y" in kwargs:
-            self.y = ["y"]
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
 
     def to_dictionary(self):
-        """returns dict representation of a Rectangle"""
+        """Returns dict representation of a Square"""
         return {
             "id": self.id,
             "x": self.x,
