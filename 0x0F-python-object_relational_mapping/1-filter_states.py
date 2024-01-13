@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
 """
-Module that connects python script to a database
+a script that lists all states with a name starting with
+(upper N) from the database
 """
 if __name__ == "__main__":
     import MySQLdb
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     my_cursor = my_db.cursor()
     my_cursor.execute(
         """SELECT * FROM states WHERE name LIKE
-        BINARY 'N%'ORDER BY states.id ASC
+        BINARY 'N%' ORDER BY states.id ASC
         """
         )
 
