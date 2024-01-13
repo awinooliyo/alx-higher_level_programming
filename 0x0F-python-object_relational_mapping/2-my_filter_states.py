@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """
-Module that connects a python script to a database
+A script that takes in an argument and
+displays all value in the states table
+of where name matches the argument.
 """
 
 if __name__ == "__main__":
