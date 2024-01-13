@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """
-Module that connects a python script to a database
+This is a script that takes in arguments and
+displays all values in the states table of
+hbtn_0e_0_usa where name matches the argument.
+This is an SQL Injection.
 """
 
 if __name__ == "__main__":
@@ -22,7 +25,7 @@ if __name__ == "__main__":
 
     # Execute a SELECT query to fetch data
     my_cursor.execute(
-        "SELECT * FROM states  WHERE name=%s ORDER BY id", (argv[4], ))
+        "SELECT * FROM states  WHERE name = %s ORDER BY id", (argv[4], ))
 
     # fetch all the data returned by the query
     my_data = my_cursor.fetchall()
