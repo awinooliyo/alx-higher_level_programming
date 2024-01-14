@@ -26,10 +26,10 @@ if __name__ == "__main__":
         )
 
     # fetch the data queried
-    my_data = my_cursor.fetchall()
+    results = my_cursor.fetchall()
 
     # iterate to print a tuple
-    for data in my_data:
+    for data in results:
         print(data)
 
     # Close all cursors
