@@ -31,10 +31,10 @@ if __name__ == "__main__":
         )
 
     # fetch all the data returned by the query
-    my_data = my_cursor.fetchall()
+    results = my_cursor.fetchall()
 
     # Iterate through the fetched data and print each row
-    for row in my_data:
+    for row in results:
         print(row)
 
     # Close all cursors
