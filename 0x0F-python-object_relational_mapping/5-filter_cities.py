@@ -23,18 +23,19 @@ if __name__ == "__main__":
     my_cursor = my_db.cursor()
 
     # Execute a SELECT query to fetch data
-    my_cursor.execute(
-        """SELECT * FROM cities
+    my_cursor.execute("""
+        SELECT *
+        FROM cities
         INNER JOIN states
         ON cities.state_id = states.id
-        ORDER BY cities.id"""
-    )
+        ORDER BY cities.id
+        """)
+
+    results = my_cursor.fetchall()
 
     print(", ".join([city[2]
-                     for city in my_cursor.fetchall()
-                     if city[4] == argv[4]])
-
-          )
+                    for city in results
+                    if city[4] == argv[4]]))
 
     # Close all cursors
     my_cursor.close()
