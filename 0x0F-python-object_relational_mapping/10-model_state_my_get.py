@@ -1,14 +1,12 @@
 #!/usr/bin/python3
 
 """
-lists all City objects from the database hbtn_0e_101_usa
-connect to database using SQLAlchemy module
+Module that connects python script to a database
 """
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from relationship_city import Base, City
-from relationship_state import State
+from model_state import Base, State
 
 if __name__ == "__main__":
 
@@ -21,7 +19,11 @@ if __name__ == "__main__":
     my_session_maker = sessionmaker(bind=engine)
     my_session = my_session_maker()
 
-    for city in my_session.query(City).order_by(City.id):
-        print("{}: {} -> {}".format(city.id, city.name, city.state.name))
+    for state in my_session.query(State):
+        if argv[4] == state.name:
+            print("{}".format(state.id))
+            break
+    else:
+        print("Not found")
 
     my_session.close()
