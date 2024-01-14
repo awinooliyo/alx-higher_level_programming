@@ -22,7 +22,7 @@ if __name__ == "__main__":
     my_session = my_session_maker()
 
     for state, city in my_session.query(State, City).filter(
-        State.id == City.state_id).all():
+                                            State.id == City.state_id).all():
         print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     my_session.close()
