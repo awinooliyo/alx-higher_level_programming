@@ -11,6 +11,7 @@ from model_state import Base, State
 
 Base = declarative_base()
 
+
 class City(Base):
     """City class
     Attributes:
@@ -23,4 +24,3 @@ class City(Base):
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
     state_id = Column(Integer, ForeignKey("states.id"), nullable=False)
-
