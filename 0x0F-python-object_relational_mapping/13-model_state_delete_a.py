@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 """
-A script that deletes all State objects with a name
-containing the letter a from the database hbtn_0e_6_usa
+A script that deletes all State objects with a
+name containing the letter a
+from the database hbtn_0e_6_usa
 """
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from model_state import Base, State # W: 'model_state.Base' imported but unused
+from model_state import Base, State
 
 if __name__ == "__main__":
 
@@ -20,8 +21,9 @@ if __name__ == "__main__":
     my_session_maker = sessionmaker(bind=engine)
     my_session = my_session_maker()
 
-    state = my_session.query(State).filter_by(id=2).first()
-    state.name = "New Mexico"
+    states = my_session.query(State).filter(State.name.like('%a%')).all()
+    for state in states:
+        my_session.delete(state)
     my_session.commit()
 
     my_session.close()
