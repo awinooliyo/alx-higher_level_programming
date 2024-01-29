@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""using the GitHub API to list commits"""
 
 import sys
 import requests
